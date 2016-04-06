@@ -4,9 +4,9 @@ MAINTAINER lioncui@163.com
 
 ADD localtime /etc/localtime
 
-ADD tomcat /app/
+ADD tomcat /app
 
-ADD jre /app/
+ADD jre /app/jre
 
 ENV JAVA_HOME /app/jre
 
@@ -27,6 +27,6 @@ RUN apk --update add wget ca-certificates && \
 
 EXPOSE 8080
 
-WORKDIR /app/tomcat/bin
+WORKDIR /app/bin
 
 CMD ["sh","catalina.sh","run"]
