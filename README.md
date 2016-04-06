@@ -11,8 +11,10 @@ docker run -d -p 8080:8080 -v app.war:/app/webapps/app.war lioncui/alpine-tomcat
 ```
 
 > if u want to write it into dockerfile
+
+
 ```
-FROM lioncui/alpine-tomcat
+FROM lioncui/alpine-tomcat    
 
 ADD app.war /app/webapps/
 ```
