@@ -7,16 +7,19 @@
 
 ##Use case
 ```
-docker run -d -p 8080:8080 -v app.war:/app/webapps/app.war lioncui/alpine-tomcat
+docker run -d -p 8080:8080 -v app.war:/opt/tomcat8/webapps/app.war nuaays/alpine-tomcat
 ```
 
 > if u want to write it into dockerfile
 
 
 ```
-FROM lioncui/alpine-tomcat    
+FROM nuaays/alpine-tomcat
 
-ADD app.war /app/webapps/
+ADD app.war/opt/tomcat8/webapps/
+
+CMD ["sh","/opt/tomcat8/bin/catalina.sh","run"]
+
 ```
 
 Ths all
