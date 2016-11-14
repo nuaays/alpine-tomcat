@@ -21,5 +21,3 @@ ADD app.war/opt/tomcat8/webapps/
 CMD ["sh","/opt/tomcat8/bin/catalina.sh","run"]
 
 ```
-
-Ths all
